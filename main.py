@@ -3,6 +3,7 @@ import requests
 from fastapi import FastAPI, HTTPException, status
 from fastapi.datastructures import UploadFile
 from fastapi.params import File
+from fastapi.middleware.cors import CORSMiddleware
 
 import pandas as pd
 
@@ -11,6 +12,16 @@ from src.schema.predict import PredictRequest, PredictResponse, Predict
 from src.processor.similarity import get_cosine
 
 app = FastAPI()
+
+origins = ["*"]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 @app.post(
