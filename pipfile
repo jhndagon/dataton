@@ -1,0 +1,38 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+black = "*"
+flake8 = "*"
+pre-commit = "*"
+pytest = "*"
+pytest-cov = "*"
+
+[packages]
+fastapi = "0.60.1"
+pydantic = "*"
+uvicorn = "*"
+requests = "*"
+gunicorn = "*"
+starlette = "*"
+tortoise-orm = "*"
+asyncpg = "*"
+pre-commit = "*"
+pytest = "*"
+pytest-cov = "*"
+asynctest = "*"
+debugpy = "*"
+uvloop = "*"
+httptools = "*"
+python-multipart = "*"
+pandas = "*"
+xlrd = "*"
+openpyxl = "*"
+
+[requires]
+python_version = "3.8"
+
+[pipenv]
+allow_prereleases = true
