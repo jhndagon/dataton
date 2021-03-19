@@ -53,7 +53,7 @@ async def predict_file(
     
     data =  [
         Predict(
-            **requests.post("https://8hw1id.deta.dev/predict", json={
+            **requests.post("http://34.74.44.189:8978/predict", json={
                 "weight": weig,
                 "volume": vol
             }).json()
@@ -92,7 +92,7 @@ async def predict(
         
     data =  [
         Predict(
-            **requests.post("https://8hw1id.deta.dev/predict", json={
+            **requests.post("http://34.74.44.189:8978/predict", json={
                 "weight": weight,
                 "volume": volume
             }).json()
